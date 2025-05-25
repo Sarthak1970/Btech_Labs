@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lab 7</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            background-color: #0984e3;
+            font-family: Arial, sans-serif;
+        }
+        #output {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        #myIframe {
+            align-self: center;
+            margin-top: 10px;
+            width: 100%;
+            height: 500px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Loops, Events, IFRAME, and jQuery Example</h2>
+
+    <!-- Button to trigger loop and event -->
+    <button id="displayNumbersBtn">Display Numbers</button>
+    <button id="changeIframeBtn">Change IFRAME</button>
+
+    <!-- Output for loop results -->
+    <div id="output"></div>
+
+    <!-- IFRAME element -->
+    <iframe id="myIframe" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"></iframe>
+
+    <script>
+        // Store the original src
+        var original_src = "https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik";
+        var new_src = "https://www.wikipedia.org/";
+
+        // jQuery ready function to ensure the DOM is fully loaded
+        $(document).ready(function() {
+            // Event handling using jQuery
+            $('#displayNumbersBtn').click(function() {
+                // Clear previous output
+                $('#output').html('');
+
+                // Call display_numbers function
+                display_numbers();
+            });
+
+            $('#changeIframeBtn').click(function() {
+                // Toggle the IFRAME src between original and new
+                change_Iframe();
+            });
+        });
+
+        // JavaScript function to display numbers
+        function display_numbers() {
+            var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            for (var i = 0; i < numbers.length; i++) {
+                // Append each number to the output div
+                $('#output').append('Number: ' + numbers[i] + '<br>');
+            }
+        }
+
+        // Function to toggle IFRAME source
+        function change_Iframe() {
+            var iframe = document.getElementById("myIframe");
+
+            // Check the current src and toggle
+            if (iframe.src === original_src) {
+                iframe.src = new_src;
+            } else {
+                iframe.src = original_src;
+            }
+        }
+    </script>
+
+</body>
+</html>

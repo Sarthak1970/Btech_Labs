@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a3d62;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            background-color: rgb(202, 201, 201);
+            background-image: -moz-linear-gradient();
+            padding: 20px;
+            box-shadow: 10px 10px 10px rgba(6, 15, 6, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #080808;
+            color: rgb(252, 249, 249);
+            border:hsl(from rgb 10 10 10);
+            border-radius: 5px;
+            cursor:grabbing;
+        }
+        button:hover {
+            background-color: #c7cfc7;
+            color: #080808;
+            transition: 0.2s ease-in-out;
+        }
+        p {
+            font-size: 1.0em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Welcome to My Dynamic Webpage</h1>
+        <p id="dynamic-text">Click the button to change this text dynamically!</p>
+        <button onclick="changeText()">Click to change</button>
+    </div>
+
+    <script src="webpage.js"></script>
+
+</body>
+</html>
