@@ -1,5 +1,5 @@
 #include<iostream>
-#include"demorgans.h"
+#include"gates.h"
 using namespace std;
 
 /*
@@ -25,6 +25,7 @@ void demorgan2(string a,string b){
     cout<<"NOT A AND NOT B ="<<s2<<endl;
 
     if(s1==s2) cout<<"Hence Implemented Demorgan's second law"<<endl;
+    else cout<<"Second Lae Failed."<<endl;
 }
 
 
