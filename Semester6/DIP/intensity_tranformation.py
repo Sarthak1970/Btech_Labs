@@ -33,7 +33,7 @@ img=cv2.imread("pexels-okcode-2150281490-35381580.jpg",cv2.IMREAD_GRAYSCALE)
 img=cv2.resize(img,(640,480))
 
 gamma_transform = PowerLawTransform(gamma=0.5)
-imgnegative_trans=Image_Negative()
+imgnegative_trans=Image_Negative(maxval=200)
 powerlaw=PowerLawTransform()
 
 gamma = gamma_transform.apply(img)
