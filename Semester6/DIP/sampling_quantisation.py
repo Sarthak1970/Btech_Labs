@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img=cv2.imread("pexels-okcode-2150281490-35381580.jpg")
+img=cv2.imread("images/top-dividend-stocks.jpg")
 
 h,w,c=img.shape
 print(h,w,c)
