@@ -1,7 +1,7 @@
 import cv2 
 import sys
 
-img = cv2.imread("pexels-okcode-2150281490-35381580.jpg")
+img = cv2.imread("images/top-dividend-stocks.jpg")
 
 if img is None:
     sys.exit("Could not read the image.")
