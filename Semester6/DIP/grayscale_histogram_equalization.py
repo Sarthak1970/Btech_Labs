@@ -66,5 +66,5 @@ class HistogramEqualizerGray:
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 
-processor = HistogramEqualizerGray("imgs/WhatsApp Image 2026-02-05 at 1.11.05 PM (1).jpeg")
+processor = HistogramEqualizerGray("images/top-dividend-stocks.jpg")
 processor.show_results()

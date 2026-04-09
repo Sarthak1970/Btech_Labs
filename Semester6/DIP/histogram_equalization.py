@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = cv2.imread("imgs/pexels-okcode-2150281490-35381580.jpg")
+img = cv2.imread("images/top-dividend-stocks.jpg")
 
 class Histogram_Equalizer:
 

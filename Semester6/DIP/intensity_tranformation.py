@@ -31,7 +31,7 @@ class PowerLawTransform:
         power_img = np.power(img_norm, self.gamma)
         return np.uint8(power_img * 255)
 
-img=cv2.imread("pexels-okcode-2150281490-35381580.jpg",cv2.IMREAD_GRAYSCALE)
+img=cv2.imread("images/WhatsApp Image 2026-02-12 at 12.53.21 PM.jpeg",cv2.IMREAD_GRAYSCALE)
 img=cv2.resize(img,(640,480))
 
 gamma_transform = PowerLawTransform(gamma=0.5)
