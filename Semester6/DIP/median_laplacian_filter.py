@@ -30,7 +30,7 @@ def laplacian_filter(image):
     laplacian = np.zeros_like(image, dtype=np.float32)
     
     for ch in range(c):
-        for i in range(h):
+        for i in range(h):q
             for j in range(w):
                 region = padded[i:i+3, j:j+3, ch]
                 laplacian[i, j, ch] = np.sum(region * kernel)
